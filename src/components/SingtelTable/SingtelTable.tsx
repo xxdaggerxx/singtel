@@ -6,6 +6,16 @@ import { CheckBox } from "../checkbox/CheckBox";
 import { RadioBox } from "../RadioBox/RadioBox";
 import { MobileCell } from "./MobileCell";
 
+
+//props:
+///rows
+//columns ,  sizing
+
+//onselect
+//selectinon type
+//mobile screen type
+//force update
+
 export function SingtelTable() {
 
     return (
@@ -37,7 +47,7 @@ export function SingtelTable() {
                     <TableRow>
                         <TableCell><RadioBox selected={true}/></TableCell>
                         <TableCell>Hello worls thiss H</TableCell>
-                        <TableCell>DiGi 1800 / DiGi /  MYMY18</TableCell>
+                        <TableCell>DiGi 1800 / </TableCell>
                         <TableCell>Yes</TableCell>
                     </TableRow>
                     <TableRow >

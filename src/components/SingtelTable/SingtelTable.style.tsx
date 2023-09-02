@@ -27,14 +27,10 @@ export const TableHeader = styled.thead`
         }
     }
         th:first-child {
-
                 ${mobileBreakPoint('padding: 2.4rem;  border-top-left-radius:1.6rem;', 
         'padding: 0.8rem 1.6rem 0.8rem 1.6rem;  border-top-left-radius:0.8rem;')}
 
-           
-                
         }
-
         th:last-child {
                 
                 ${mobileBreakPoint('border-top-right-radius:1.6rem;', 
@@ -59,6 +55,7 @@ export const TableBody = styled.tbody`
         font-weight: inherit;
         vertical-align: bottom;
         .CellContents{
+            box-sizing: border-box;
             /* top | right | bottom | left */
             ${mobileBreakPoint('padding: 2.4rem 2.4rem 2.4rem 0rem;', 
         'padding: 0.8rem 1.6rem 0.8rem 0rem;')}

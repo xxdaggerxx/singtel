@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React from "react";
+import React, { useRef } from "react";
 import { SortButton } from "./SortButton/SortButton";
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 export function TableCell(props: Props) {
 
     return (
-        <th >
+        <th  >
             <div className="CellContents"> <span>{props?.children}</span> {!props.sort || <SortButton/>}</div>
         </th>
     )
