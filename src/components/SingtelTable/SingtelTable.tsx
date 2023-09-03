@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import React, { useImperativeHandle, useMemo, useState } from "react";
+
+import React, { CSSProperties, useImperativeHandle, useMemo, useState } from "react";
 import { TableBody, TableHeader, TableRow, Table, TableContainer } from "./SingtelTable.style";
 import { TableCell } from "./TableCell/TableCell";
 import { TableColumns, TableRows } from "./SingtelTable.types";
@@ -8,19 +8,27 @@ import  TableRowContent  from "./TableRowContent/TableRowContent";
 
 
 
-//fix lines
-//unit tests
+//TODO: fix bottom lines
 
 interface Props<T> {
+    /** Table Column Details, propname must be unique*/
     cols: TableColumns[];
+    /** Table Row Details, must include unique key */
     rows: TableRows<T>[];
+    /** Toggle between multi or single select, leave empty if no selection is required. */
     selectionType?: 'multi' | 'single';
+    /** Function called when user selects rows. Returns selected table rows */
     onSelect?: (selected: TableRows<T>[]) => void;
+    /** toggle the mobile view if viewport is below mobile breakpoint */
     mobileCollapsed?: boolean;
+     /** Title of table use only if mobileCollapsed is true */
     title?: string;
-    width?: string;
+    /** Style the table container, great to use for setting container width */
+    style?: CSSProperties;
 }
-
+/** A Sortable datatable for mobile and desktop, includes single & multiselect options, made by aaron.issac@gmail.com 
+ * Based on : https://www.figma.com/file/LRl3kQFCXnmViiKHkfdBwo/Table-Component-1?node-id=0%3A1&mode=dev
+*/
 export function SingtelTable<T>(props: Props<T>) {
 
     const [rows, setRows] = useState<TableRows<T>[]>(props.rows)
@@ -74,7 +82,7 @@ export function SingtelTable<T>(props: Props<T>) {
 
     return (
 
-        <TableContainer style={{width:props.width}} data-testid="SingtelTable" className="SingtelTable-Container">
+        <TableContainer style={props.style} data-testid="SingtelTable" className="SingtelTable-Container">
             <Table>
                 <TableHeader>
                     <TableRow>

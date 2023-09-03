@@ -85,6 +85,7 @@ export const TableBody = styled.tbody`
 
     tr .MobileCell{
         border-bottom: 1px solid ${props => props.theme.color.N20};
+        padding-left: 1.6rem;
     }
 
     tr:last-child{

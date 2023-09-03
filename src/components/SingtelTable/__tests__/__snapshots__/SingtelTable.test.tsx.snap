@@ -65,6 +65,7 @@ exports[`Table Tests desktop compressed table displays correctly 1`] = `
 
 .c6 tr .MobileCell {
   border-bottom: 1px solid #E1E1E1;
+  padding-left: 1.6rem;
 }
 
 .c6 tr:last-child .CellContents {
@@ -188,7 +189,6 @@ exports[`Table Tests desktop compressed table displays correctly 1`] = `
 <div
   class="c0 SingtelTable-Container"
   data-testid="SingtelTable"
-  style="width: 300px;"
 >
   <table
     class="c1"
@@ -506,6 +506,7 @@ exports[`Table Tests desktop table displays correctly 1`] = `
 
 .c6 tr .MobileCell {
   border-bottom: 1px solid #E1E1E1;
+  padding-left: 1.6rem;
 }
 
 .c6 tr:last-child .CellContents {
@@ -629,7 +630,6 @@ exports[`Table Tests desktop table displays correctly 1`] = `
 <div
   class="c0 SingtelTable-Container"
   data-testid="SingtelTable"
-  style="width: 800px;"
 >
   <table
     class="c1"
@@ -947,6 +947,7 @@ exports[`Table Tests mobile table displays correctly 1`] = `
 
 .c4 tr .MobileCell {
   border-bottom: 1px solid #E1E1E1;
+  padding-left: 1.6rem;
 }
 
 .c4 tr:last-child .CellContents {
@@ -1319,6 +1320,7 @@ exports[`Table Tests table sorting works 1`] = `
 
 .c6 tr .MobileCell {
   border-bottom: 1px solid #E1E1E1;
+  padding-left: 1.6rem;
 }
 
 .c6 tr:last-child .CellContents {

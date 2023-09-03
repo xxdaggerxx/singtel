@@ -38,7 +38,7 @@ describe('Table Tests', () => {
         //Act
         const { getByTestId } = await render(<ThemeProvider theme={getDesignTokens()}>
             <GlobalStyle />
-            <SingtelTable width="800px" rows={rowdata1} cols={coldata1}></SingtelTable>
+            <SingtelTable  rows={rowdata1} cols={coldata1}></SingtelTable>
         </ThemeProvider>)
 
         ///Assert
@@ -49,7 +49,7 @@ describe('Table Tests', () => {
         //Act
         const { getByTestId } = await render(<ThemeProvider theme={getDesignTokens()}>
             <GlobalStyle />
-            <SingtelTable width="300px" rows={rowdata1} cols={coldata1}></SingtelTable>
+            <SingtelTable  rows={rowdata1} cols={coldata1}></SingtelTable>
         </ThemeProvider>)
 
         ///Assert
@@ -105,13 +105,15 @@ describe('Table Tests', () => {
 
     it('table checkbox select works', async () => {
 
-        //Act
+        //arrange
+        let onSelectMock = jest.fn();
 
+        //Act
         const { getByRole, getAllByRole } = await render(
-        <ThemeProvider theme={getDesignTokens()}>
-            <GlobalStyle />
-            <SingtelTable selectionType={'multi'} rows={rowdata1} cols={coldata1}></SingtelTable>
-        </ThemeProvider>)
+            <ThemeProvider theme={getDesignTokens()}>
+                <GlobalStyle />
+                <SingtelTable onSelect={onSelectMock} selectionType={'multi'} rows={rowdata1} cols={coldata1}></SingtelTable>
+            </ThemeProvider>)
 
         const checkBtn = getAllByRole("checkbox");
 
@@ -121,17 +123,21 @@ describe('Table Tests', () => {
         })
         ///Assert
         expect(getByRole("check")).toBeInTheDocument();
+        expect(onSelectMock).toBeCalled();
     })
 
     it('table radiobutton select works', async () => {
 
+        //arrange
+        let onSelectMock = jest.fn();
+
         //Act
 
         const { getByRole, getAllByRole } = await render(
-        <ThemeProvider theme={getDesignTokens()}>
-            <GlobalStyle />
-            <SingtelTable selectionType={'single'} rows={rowdata1} cols={coldata1}></SingtelTable>
-        </ThemeProvider>)
+            <ThemeProvider theme={getDesignTokens()}>
+                <GlobalStyle />
+                <SingtelTable onSelect={onSelectMock} selectionType={'single'} rows={rowdata1} cols={coldata1}></SingtelTable>
+            </ThemeProvider>)
 
         const checkBtn = getAllByRole("radiogroup");
 
@@ -139,8 +145,11 @@ describe('Table Tests', () => {
             await userEvent.click(checkBtn[0])
 
         })
+
+
         ///Assert
         expect(getByRole("radioSelect")).toBeInTheDocument();
+        expect(onSelectMock).toBeCalled();
     })
 
 })

@@ -7,6 +7,7 @@ import { coldata1, rowdata1 } from './tableTestData';
 
 const meta: Meta<typeof SingtelTable> = {
   component: SingtelTable,
+  tags: ['autodocs']
 };
 
 type Story = StoryObj<typeof SingtelTable>;
@@ -17,10 +18,33 @@ type Story = StoryObj<typeof SingtelTable>;
  * to learn how to use render functions.
  */
 export const Primary: Story = {
-    render: () => (
+    args: {
+        rows: rowdata1,
+        cols: coldata1,
+        style: {maxWidth:"800px"},
+        title: "My Table"
+      },
+    render: (args) => (
         <ThemeProvider theme={getDesignTokens()}>
             <GlobalStyle />
-            <SingtelTable rows={rowdata1} cols={coldata1}></SingtelTable>
+            <SingtelTable {...args}></SingtelTable>
+        </ThemeProvider>
+    ),
+};
+
+
+export const MobileCollapsed: Story = {
+    args: {
+        rows: rowdata1,
+        cols: coldata1,
+        mobileCollapsed: true,
+        style: {maxWidth:"800px"},
+        title: "My Table"
+      },
+    render: (args) => (
+        <ThemeProvider theme={getDesignTokens()}>
+            <GlobalStyle />
+            <SingtelTable {...args}></SingtelTable>
         </ThemeProvider>
     ),
 };

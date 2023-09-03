@@ -1,4 +1,5 @@
 export interface TableColumns {
+    /** Prop Name Test */
     propName: string;
     colTitle: string;
     sort?: boolean;
