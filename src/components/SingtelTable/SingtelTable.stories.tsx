@@ -21,8 +21,8 @@ export const Primary: Story = {
     args: {
         rows: rowdata1,
         cols: coldata1,
-        style: {maxWidth:"800px"},
-        title: "My Table"
+        style: {maxWidth:"900px"},
+        title: "My Table",
       },
     render: (args) => (
         <ThemeProvider theme={getDesignTokens()}>
@@ -38,7 +38,7 @@ export const MobileCollapsed: Story = {
         rows: rowdata1,
         cols: coldata1,
         mobileCollapsed: true,
-        style: {maxWidth:"800px"},
+        style: {maxWidth:"900px"},
         title: "My Table"
       },
     render: (args) => (

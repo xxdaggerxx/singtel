@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import {dynamicFontSizing, mobileBreakPoint} from "../utils/styling.utils"
+import { mobileBreakPoint, dynamicFontSizingHeader, dynamicFontSizingCell} from "../utils/styling.utils"
 
 
 
@@ -11,13 +11,14 @@ border-collapse:collapse;
 export const TableHeader = styled.thead`
     background-color: ${props => props.theme.color.N10};
     font-family: 'AvenirHeavy';
-     ${dynamicFontSizing()};
+     ${dynamicFontSizingHeader()}
+
     text-align: left ;
     
     th {
          /* top | right | bottom | left */
         ${mobileBreakPoint('padding: 2.4rem 2.4rem 2.4rem 0rem;', 
-        'padding: 0.8rem 1.6rem 0.8rem 0rem;')}
+        'padding: 0.8rem 1.6rem 0.8rem 1.6rem;')}
 
         //width: fit-content;
         .CellContents{
@@ -49,7 +50,7 @@ export const TableRow = styled.tr<TableRowProps>`
 export const TableBody = styled.tbody`
     background-color: ${props => props.theme.color.white};
    font-family: 'AvenirBook';
-   ${dynamicFontSizing()};
+   ${dynamicFontSizingCell()}
    text-align: left; 
    th{
         font-weight: inherit;
@@ -70,6 +71,7 @@ export const TableBody = styled.tbody`
             ${mobileBreakPoint('margin-left: 2.4rem;', 
         'margin-left: 1.6rem;')}
         }
+        
     }
 
     th:last-child{
@@ -86,7 +88,14 @@ export const TableBody = styled.tbody`
     tr .MobileCell{
         border-bottom: 1px solid ${props => props.theme.color.N20};
         padding-left: 1.6rem;
+      //  padding-left: 1.6rem;
     }
+    
+    tr th:first-child.MobileCell{
+        padding-left: 0rem;
+        margin-left: 1.6rem;
+    }
+
 
     tr:last-child{
         .CellContents{

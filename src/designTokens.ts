@@ -8,8 +8,8 @@ export const designTokens = {
     sm: "480px",
   },
   fontSize: {
-    lg: "2rem",
-    md: "1.8rem",
+    lg: "2.4rem",
+    md: "2.0rem",
     sm: "1.4rem",
   },
   color: {
