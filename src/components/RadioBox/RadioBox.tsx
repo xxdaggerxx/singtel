@@ -14,8 +14,8 @@ function RadioBox(props: Props) {
 
     return (
         <>
-            <StyledRadiobox selected={props.selected} onMouseDown={onchange}>
-            {!props.selected || <WhiteCircle></WhiteCircle>}
+            <StyledRadiobox  role="radiogroup" selected={props.selected} onMouseDown={onchange}>
+            {!props.selected || <WhiteCircle role="radioSelect"></WhiteCircle>}
             </StyledRadiobox>
         </>
     )

@@ -74,7 +74,7 @@ export function SingtelTable<T>(props: Props<T>) {
 
     return (
 
-        <TableContainer style={{width:props.width}} data-test-id="SingtelTable" className="SingtelTable-Container">
+        <TableContainer style={{width:props.width}} data-testid="SingtelTable" className="SingtelTable-Container">
             <Table>
                 <TableHeader>
                     <TableRow>

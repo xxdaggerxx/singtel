@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../../globalStyles';
 import { SingtelTable } from './SingtelTable';
 import { getDesignTokens } from '../../designTokens';
-import { coldata1, rowdata1 } from './__tests__/tableTestData';
+import { coldata1, rowdata1 } from './tableTestData';
 
 const meta: Meta<typeof SingtelTable> = {
   component: SingtelTable,

@@ -35,7 +35,7 @@ function TableRowContent<T>(props: Props<T>) {
             <>{props?.cols.map((col: TableColumns) => <TableCell key={col.propName + "-" + props.row.key} className={col.propName + "-" + props.row.key}>{props.row[col.propName as keyof T]}</TableCell>)}
             </>}
 
-    </TableRow>), [isMobile, props.row.key, props.row.selected]);
+    </TableRow>), [isMobile, props.row.key, props.row.selected, props.selectionType]);
 
     return renderRow
 
