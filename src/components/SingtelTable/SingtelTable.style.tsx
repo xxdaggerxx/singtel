@@ -59,8 +59,10 @@ export const TableBody = styled.tbody`
             /* top | right | bottom | left */
             ${mobileBreakPoint('padding: 2.4rem 2.4rem 2.4rem 0rem;', 
         'padding: 0.8rem 1.6rem 0.8rem 0rem;')}
-            border-bottom: 0.1px solid ${props => props.theme.color.N20};
+            border-bottom: 1px solid ${props => props.theme.color.N20};
         }
+
+        
     }
 
     th:first-child{
@@ -81,6 +83,10 @@ export const TableBody = styled.tbody`
         }
     }
 
+    tr .MobileCell{
+        border-bottom: 1px solid ${props => props.theme.color.N20};
+    }
+
     tr:last-child{
         .CellContents{
             border-bottom:none;
@@ -94,7 +100,13 @@ export const TableBody = styled.tbody`
             ${mobileBreakPoint('border-bottom-left-radius:1.6rem;', 
         'border-bottom-left-radius:0.8rem;')}
         }
+        .MobileCell{
+             border-bottom: none;
+        }
     }
+  
+
+    
 `
 
 export const SortButton = styled.button`
