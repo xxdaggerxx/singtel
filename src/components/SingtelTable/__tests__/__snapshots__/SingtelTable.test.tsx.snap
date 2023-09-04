@@ -9,7 +9,7 @@ exports[`Table Tests desktop compressed table displays correctly 1`] = `
 .c2 {
   background-color: #F7F7F7;
   font-family: 'AvenirHeavy';
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   text-align: left;
 }
 
@@ -39,7 +39,7 @@ exports[`Table Tests desktop compressed table displays correctly 1`] = `
 .c6 {
   background-color: #FFFFFF;
   font-family: 'AvenirBook';
-  font-size: 1.8rem;
+  font-size: 2.0rem;
   text-align: left;
 }
 
@@ -54,18 +54,21 @@ exports[`Table Tests desktop compressed table displays correctly 1`] = `
   border-bottom: 1px solid #E1E1E1;
 }
 
-.c6 th:first-child .CellContents {
-  margin-left: 2.4rem;
+.c6 th:first-child {
+  padding-left: 2.4rem;
 }
 
-.c6 th:last-child .CellContents {
-  margin-right: 2.4rem;
-  padding-right: 0rem;
+.c6 th:last-child {
+  padding-right: 2.4rem;
 }
 
 .c6 tr .MobileCell {
   border-bottom: 1px solid #E1E1E1;
-  padding-left: 1.6rem;
+}
+
+.c6 tr th:first-child.MobileCell {
+  padding-left: 0rem;
+  margin-left: 1.6rem;
 }
 
 .c6 tr:last-child .CellContents {
@@ -157,14 +160,8 @@ exports[`Table Tests desktop compressed table displays correctly 1`] = `
 }
 
 @media only screen and (max-width: 480px) {
-  .c6 th:first-child .CellContents {
-    margin-left: 1.6rem;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .c6 th:last-child .CellContents {
-    margin-right: 1.6rem;
+  .c6 th:first-child {
+    padding-left: 1.6rem;
   }
 }
 
@@ -450,7 +447,7 @@ exports[`Table Tests desktop table displays correctly 1`] = `
 .c2 {
   background-color: #F7F7F7;
   font-family: 'AvenirHeavy';
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   text-align: left;
 }
 
@@ -480,7 +477,7 @@ exports[`Table Tests desktop table displays correctly 1`] = `
 .c6 {
   background-color: #FFFFFF;
   font-family: 'AvenirBook';
-  font-size: 1.8rem;
+  font-size: 2.0rem;
   text-align: left;
 }
 
@@ -495,18 +492,21 @@ exports[`Table Tests desktop table displays correctly 1`] = `
   border-bottom: 1px solid #E1E1E1;
 }
 
-.c6 th:first-child .CellContents {
-  margin-left: 2.4rem;
+.c6 th:first-child {
+  padding-left: 2.4rem;
 }
 
-.c6 th:last-child .CellContents {
-  margin-right: 2.4rem;
-  padding-right: 0rem;
+.c6 th:last-child {
+  padding-right: 2.4rem;
 }
 
 .c6 tr .MobileCell {
   border-bottom: 1px solid #E1E1E1;
-  padding-left: 1.6rem;
+}
+
+.c6 tr th:first-child.MobileCell {
+  padding-left: 0rem;
+  margin-left: 1.6rem;
 }
 
 .c6 tr:last-child .CellContents {
@@ -598,14 +598,8 @@ exports[`Table Tests desktop table displays correctly 1`] = `
 }
 
 @media only screen and (max-width: 480px) {
-  .c6 th:first-child .CellContents {
-    margin-left: 1.6rem;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .c6 th:last-child .CellContents {
-    margin-right: 1.6rem;
+  .c6 th:first-child {
+    padding-left: 1.6rem;
   }
 }
 
@@ -891,7 +885,7 @@ exports[`Table Tests mobile table displays correctly 1`] = `
 .c2 {
   background-color: #F7F7F7;
   font-family: 'AvenirHeavy';
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   text-align: left;
 }
 
@@ -921,7 +915,7 @@ exports[`Table Tests mobile table displays correctly 1`] = `
 .c4 {
   background-color: #FFFFFF;
   font-family: 'AvenirBook';
-  font-size: 1.8rem;
+  font-size: 2.0rem;
   text-align: left;
 }
 
@@ -936,18 +930,21 @@ exports[`Table Tests mobile table displays correctly 1`] = `
   border-bottom: 1px solid #E1E1E1;
 }
 
-.c4 th:first-child .CellContents {
-  margin-left: 2.4rem;
+.c4 th:first-child {
+  padding-left: 2.4rem;
 }
 
-.c4 th:last-child .CellContents {
-  margin-right: 2.4rem;
-  padding-right: 0rem;
+.c4 th:last-child {
+  padding-right: 2.4rem;
 }
 
 .c4 tr .MobileCell {
   border-bottom: 1px solid #E1E1E1;
-  padding-left: 1.6rem;
+}
+
+.c4 tr th:first-child.MobileCell {
+  padding-left: 0rem;
+  margin-left: 1.6rem;
 }
 
 .c4 tr:last-child .CellContents {
@@ -1024,14 +1021,8 @@ exports[`Table Tests mobile table displays correctly 1`] = `
 }
 
 @media only screen and (max-width: 480px) {
-  .c4 th:first-child .CellContents {
-    margin-left: 1.6rem;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .c4 th:last-child .CellContents {
-    margin-right: 1.6rem;
+  .c4 th:first-child {
+    padding-left: 1.6rem;
   }
 }
 
@@ -1264,7 +1255,7 @@ exports[`Table Tests table sorting works 1`] = `
 .c2 {
   background-color: #F7F7F7;
   font-family: 'AvenirHeavy';
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   text-align: left;
 }
 
@@ -1294,7 +1285,7 @@ exports[`Table Tests table sorting works 1`] = `
 .c6 {
   background-color: #FFFFFF;
   font-family: 'AvenirBook';
-  font-size: 1.8rem;
+  font-size: 2.0rem;
   text-align: left;
 }
 
@@ -1309,18 +1300,21 @@ exports[`Table Tests table sorting works 1`] = `
   border-bottom: 1px solid #E1E1E1;
 }
 
-.c6 th:first-child .CellContents {
-  margin-left: 2.4rem;
+.c6 th:first-child {
+  padding-left: 2.4rem;
 }
 
-.c6 th:last-child .CellContents {
-  margin-right: 2.4rem;
-  padding-right: 0rem;
+.c6 th:last-child {
+  padding-right: 2.4rem;
 }
 
 .c6 tr .MobileCell {
   border-bottom: 1px solid #E1E1E1;
-  padding-left: 1.6rem;
+}
+
+.c6 tr th:first-child.MobileCell {
+  padding-left: 0rem;
+  margin-left: 1.6rem;
 }
 
 .c6 tr:last-child .CellContents {
@@ -1412,14 +1406,8 @@ exports[`Table Tests table sorting works 1`] = `
 }
 
 @media only screen and (max-width: 480px) {
-  .c6 th:first-child .CellContents {
-    margin-left: 1.6rem;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .c6 th:last-child .CellContents {
-    margin-right: 1.6rem;
+  .c6 th:first-child {
+    padding-left: 1.6rem;
   }
 }
 

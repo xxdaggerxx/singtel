@@ -62,6 +62,7 @@ export const TableBody = styled.tbody`
         'padding: 0.8rem 1.6rem 0.8rem 0rem;')}
             border-bottom: 1px solid ${props => props.theme.color.N20};
         }
+        //border-bottom: 1px solid ${props => props.theme.color.N20};
     }
 
     th:first-child{
