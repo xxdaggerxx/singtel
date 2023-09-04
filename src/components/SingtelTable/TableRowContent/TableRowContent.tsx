@@ -24,7 +24,8 @@ function TableRowContent<T>(props: Props<T>) {
    const renderRow = useMemo(()=> (<TableRow key={props.row.key} selected={!!props.row.selected}>
         {(props.selectionType == 'multi') && <TableCell ><CheckBox onChange={() => props.multiSelect(props.row)} selected={!!props.row.selected} /></TableCell>}
         {(props.selectionType == 'single') && <TableCell ><RadioBox onChange={() => props.singleSelect(props.row)} selected={!!props.row.selected} /></TableCell>}
-        {(props.mobileCollapsed && isMobile) ? <MobileCell>
+        {(props.mobileCollapsed && isMobile) ? 
+        <MobileCell>
             <label>
                 {props?.cols.map(cols=><span key={cols.propName}>{cols.colTitle} : <br/></span>)}
             </label>

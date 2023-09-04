@@ -18,7 +18,7 @@ export const TableHeader = styled.thead`
     th {
          /* top | right | bottom | left */
         ${mobileBreakPoint('padding: 2.4rem 2.4rem 2.4rem 0rem;', 
-        'padding: 0.8rem 1.6rem 0.8rem 1.6rem;')}
+        'padding: 0.8rem 1.6rem 0.8rem 0rem;')}
 
         //width: fit-content;
         .CellContents{
@@ -62,32 +62,22 @@ export const TableBody = styled.tbody`
         'padding: 0.8rem 1.6rem 0.8rem 0rem;')}
             border-bottom: 1px solid ${props => props.theme.color.N20};
         }
-
-        
     }
 
     th:first-child{
-        .CellContents{
-            ${mobileBreakPoint('margin-left: 2.4rem;', 
-        'margin-left: 1.6rem;')}
-        }
+
+            ${mobileBreakPoint(' padding-left: 2.4rem;', 
+        ' padding-left: 1.6rem;')}
         
     }
 
     th:last-child{
-        .CellContents{
-
-            ${mobileBreakPoint('margin-right: 2.4rem;', 
-        ' margin-right: 1.6rem;')}
-
-            padding-right: 0rem;
-            
-        }
+        padding-right: 2.4rem;
     }
 
     tr .MobileCell{
         border-bottom: 1px solid ${props => props.theme.color.N20};
-        padding-left: 1.6rem;
+       // padding-left: 1.6rem;
       //  padding-left: 1.6rem;
     }
     
